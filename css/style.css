@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+
+    --fuente-principal: 3.8rem;
+}
+html { 
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto';
+    background-image: linear-gradient(to top, #DFe9f3 0%, var(--blanco) 100%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+}
+h2 {
+    text-align: center;
+    font-size: 2.8rem;
+}
+h3 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+span {
+    font-size: 2rem;
+}
+footer{
+    text-align: center;
+}
+
+.button{
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    border: none;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+.shadow{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.75);
+    background-color: var(--blanco);
+    padding: 2rem;
+}
+.alinear-derecha{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Menú de navegación*/
+.nav-background {
+    background-color: var(--secundario);
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container_services {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.container a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
+
+}
+/*Termina menú de navegación
+
+/* Inicio Slider*/
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.container-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-hero h2,
+.container-hero p{
+    color: var(--blanco);
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+/* Fin Slider */
+
+/* Servicios */
+.services{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service p{
+    line-height: 2;
+    text-align: center;
+}
+
+.service .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Fin Servicios */ 
+
+/* Contactanos */
+.form{
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.form fieldset{
+    border: none;
+    
+}
+.form legend{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+.campo{
+    margin-bottom: 1rem;
+
+}
+
+.campo label{
+    color:  var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+input, textarea{
+    width: 100%;
+    border: none;
+    padding: 1.5px;
+    border-radius: .5rem;
+
+}
+/*<-----> Responive Desing <----->*/
+
+/* Start SmartPhone*/
+@media (max-width:480px){
+   .container{
+       flex-direction: column;
+    }
+    .services{
+        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+}
+}
+
+/* End Smart Phone*/
+
+/*Start Tablet*/
+@media (min-width:768px){
+    .container{
+
+        flex-direction: row;
+        
+    }
+ }
+ /* End Tablet/
+
+ /*Start Laptop*/
+@media (min-width:1140){}
+
+ /* End Laptop/
+
+  /*Start Desktop*/
+@media (min-width:1400){}
+
+ /* End Desktop/
+
+
